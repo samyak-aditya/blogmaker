@@ -1,8 +1,14 @@
 import React from 'react'
 import Form1 from './form_field.js'
 
-export default function Show() {
+ function Show() {
   return (
-    <div>Show</div>
+    <div>Showsdisjfdvijsdvpisdjv
+      dvosdnvsdivndsv
+
+      <h1>redirected page</h1>
+    </div>
   )
 }
+
+export default Show

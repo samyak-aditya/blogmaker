@@ -2,7 +2,8 @@ import express  from "express";
 import collection from './../frontend_/src/mongo.js';
 import cors from 'cors'
 import mongoose  from "mongoose";
-import { Model } from "mongoose";
+import { Model, ObjectId } from "mongoose";
+import collection1 from "./../frontend_/src/mongo.js";
 
 
 
@@ -25,12 +26,12 @@ app.post("/",async(req,res) => {
         title:title
     }
 
-    
+    const id='6476779183fb88c15065f0c3'
 
     app.get("/api/current", async(req,res) =>{
         try{
-            let article1 = await collection.findById(Id)
-            res.status(200).send(article1)
+            let article1 = await collection1.find({'title':'copper'});
+            res.status(200).json(article1)
         }
         catch{
             res.status(500).send("internal server error")
@@ -39,7 +40,7 @@ app.post("/",async(req,res) => {
         }
     })
 
-    await collection.insertMany([data1])
+    await collection1.insertMany([data1])
 })
 
 app.listen(5000, () => {console.log('server started on port 5000')})
