@@ -1,5 +1,5 @@
+import mongoose from "mongoose";
 
- const mongoose =require("mongoose")
  
 
 mongoose.connect("mongodb+srv://Samyak:Cyber10@cluster0.t5hemdi.mongodb.net/?retryWrites=true&w=majority")
@@ -13,10 +13,22 @@ mongoose.connect("mongodb+srv://Samyak:Cyber10@cluster0.t5hemdi.mongodb.net/?ret
 const newSchema =new mongoose.Schema({
     title:{
         type:String,
-        required:true
+        required:true,
+        
+    },
+    content:{
+        type:String,
+        required:true,
+    },
+    Author:{
+        type:String
+    },
+    tags:{
+        type
     }
-})
 
-const collection=mongoose.model('articles001',newSchema)
+});
 
-module.exports = collection
+const collection1=mongoose.model('collection1',newSchema)
+
+ export default collection1;
